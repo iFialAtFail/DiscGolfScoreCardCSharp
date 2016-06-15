@@ -242,7 +242,131 @@ namespace Xunit.UWP.Tests
 
         #endregion
 
+        #region Scorecard Class Tests
 
+        [Fact]
+        public void Test_Scorecard_Initialize()
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew };
+
+            ScoreCard scorecard = new ScoreCard(players, course);
+        }
+
+        [Fact]
+        public void Test_Scorecard_GetCurrentHole()
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew };
+
+            //Act  Should initialize to hole 1 standard.
+            ScoreCard scorecard = new ScoreCard(players, course);
+
+            //Assert
+            Assert.Equal(1, scorecard.CurrentHole);
+        }
+
+        [Fact]
+        public void Test_Scorecard_GoToNextHole()
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew };
+            ScoreCard scorecard = new ScoreCard(players, course);
+
+            //Act  
+            scorecard.NextHole();
+
+            //Assert
+            Assert.Equal(2, scorecard.CurrentHole);
+        }
+
+        [Fact]
+        public void Test_Scorecard_GoToPreviousHole()
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew };
+            ScoreCard scorecard = new ScoreCard(players, course);
+            scorecard.NextHole();
+            scorecard.NextHole();
+            Assert.Equal(3, scorecard.CurrentHole);
+
+            //Act  
+            scorecard.PreviousHole();
+
+            //Assert
+            Assert.Equal(2, scorecard.CurrentHole);
+        }
+
+        [Fact]
+        public void Test_Scorecard_CurrentHole_TestingLowerLimit()
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew };
+            ScoreCard scorecard = new ScoreCard(players, course);
+
+            //Act
+            scorecard.PreviousHole();
+            
+            //Assert
+            Assert.Equal(1, scorecard.CurrentHole);
+            
+        }
+
+        [Fact]
+        public void Test_Scorecard_CurrentHole_TestingUpperLimit()
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew };
+            ScoreCard scorecard = new ScoreCard(players, course);
+
+            //Act
+            for (int i = 0; i < course.NumberOfHoles+2; i++)
+            {
+                scorecard.NextHole();
+            }
+
+            //Assert
+            Assert.Equal(course.NumberOfHoles, scorecard.CurrentHole);
+        }
+
+        [Fact]
+        public void Test_Scorecard_SelectPlayer()
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew };
+            ScoreCard scorecard = new ScoreCard(players, course);
+
+            //Act
+            
+            //Assert
+            //scorecard.Player[0].scoreIncrement
+        }
+
+
+
+
+        #endregion
 
 
     }

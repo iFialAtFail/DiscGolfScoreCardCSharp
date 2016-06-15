@@ -8,12 +8,58 @@ namespace Disc_Golf_Scorecard
 {
     public class ScoreCard
     {
-        private int numPlayers;
 
-        public ScoreCard(int numPlayers)
+        #region Private fields
+
+        private Player[] players;
+        private static int currentHole;
+        private Course course;
+
+        #endregion
+
+        #region Constructors
+
+        public ScoreCard(Player[] players, Course course)
         {
-            this.numPlayers = numPlayers;
+            this.players = players;
+            this.course = course;
+            currentHole = 1;
         }
 
+        #endregion
+
+        #region Public Properties
+
+        public int CurrentHole
+        {
+            get { return currentHole; }
+        }
+
+        #endregion
+
+        #region Public Methods
+
+        public void NextHole()
+        {
+            if (currentHole<course.NumberOfHoles)
+            {
+                currentHole++;
+            }
+        }
+
+        public void PreviousHole()
+        {
+            if (currentHole>1)
+            {
+                currentHole--;
+            }
+        }
+        #endregion
+
+        #region Private Helper methods
+
+
+
+        #endregion
     }
 }
