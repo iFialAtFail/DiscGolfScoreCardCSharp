@@ -6,11 +6,21 @@ namespace Xunit.UWP.Tests
 {
     public class DiscGolfTests
     {
+        #region Stock Passing Test
+
         [Fact]
         public void PassingTest()
         {
             Assert.Equal(4, Add(2, 2));
         }
+
+        private int Add(int firstNum, int secondNum)
+        {
+            return firstNum + secondNum;
+        }
+
+        #endregion
+
         #region Course Class Tests
         [Fact]
         public void Test_Course_Creation()
@@ -139,7 +149,7 @@ namespace Xunit.UWP.Tests
         #region Player Class Tests
 
         [Fact]
-        public void Test_Player_Creation()
+        public void Test_Player_Creation_GoodInput()
         {
             Course course = new Course("Big Rapids", 18);
 
@@ -149,12 +159,90 @@ namespace Xunit.UWP.Tests
 
         }
 
+        [Fact]
+        public void Test_Player_Creation_BadName()
+        {
+            Course course = new Course("Big Rapids", 18);
+
+            Exception exception = Record.Exception(()=> { Player player = new Player("M@ke", course); });
+
+            Assert.NotNull(exception);
+            Assert.IsType<ArgumentException>(exception);
+        }
+
+        [Fact]
+        public void Test_Player_Creation_BadCourse()
+        {
+            Course course = null;
+
+            Exception exception = Record.Exception(() => { Player player = new Player("Mike", course); });
+
+            Assert.NotNull(exception);
+            Assert.IsType<ArgumentNullException>(exception);
+        }
+
+        [Fact]
+        public void Test_Player_Score_InitializedWithPars()
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+
+            //Act
+            Player player = new Player("Mike", course);
+
+            //Assert
+            for (int i = 0; i < course.NumberOfHoles; i++)
+            {
+                Assert.Equal(course.CurrentHolePar[i], player.Score[i]);
+            }
+
+        }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(3)]
+        [InlineData(4)]
+        [InlineData(6)]
+        public void Test_Player_Score_IncrementScore(int value)
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player player = new Player("Mike", course);
+            int currentHole = value;
+           
+            //Act
+            player.IncrementCurrentScore(currentHole);
+            int expectedValue = course.CurrentHolePar[currentHole] + 1;
+
+            //Assert
+            Assert.Equal(expectedValue, player.Score[currentHole]);
+
+        }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(3)]
+        [InlineData(4)]
+        [InlineData(6)]
+        public void Test_Player_Score_DecrementScore(int value)
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player player = new Player("Mike", course);
+            int currentHole = value;
+
+            //Act
+            player.DecrementCurrentScore(currentHole);
+            int expectedValue = course.CurrentHolePar[currentHole] - 1;
+
+            //Assert
+            Assert.Equal(expectedValue, player.Score[currentHole]);
+
+        }
+
         #endregion
 
-        private int Add(int firstNum, int secondNum)
-        {
-            return firstNum + secondNum;
-        }
+
 
 
     }
