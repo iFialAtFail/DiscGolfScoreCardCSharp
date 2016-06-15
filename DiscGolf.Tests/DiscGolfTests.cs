@@ -358,9 +358,70 @@ namespace Xunit.UWP.Tests
             ScoreCard scorecard = new ScoreCard(players, course);
 
             //Act
-            
+            string playerName = scorecard.Players[0].Name;
+
             //Assert
-            //scorecard.Player[0].scoreIncrement
+            Assert.Equal("Mike", playerName);
+        }
+
+        [Theory]
+        [InlineData(0,4)]
+        [InlineData(1, 4)]
+        public void Test_Scorecard_Player_IncrementScore(int playerIndex, int expectedValue)
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew }; //<-- ViewModel Logic 
+            ScoreCard scorecard = new ScoreCard(players, course);
+
+            //Act
+            scorecard.Players[playerIndex].IncrementCurrentScore(scorecard.CurrentHole);
+
+            //Assert
+            Assert.Equal(expectedValue, scorecard.Players[playerIndex].Score[scorecard.CurrentHole]);
+        }
+
+        [Theory]
+        [InlineData(0, 2)]
+        [InlineData(1, 2)]
+        public void Test_Scorecard_Player_DecrementScore(int playerIndex, int expectedValue)
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew }; //<-- ViewModel Logic 
+            ScoreCard scorecard = new ScoreCard(players, course);
+
+            //Act
+            scorecard.Players[playerIndex].DecrementCurrentScore(scorecard.CurrentHole);
+
+            //Assert
+            Assert.Equal(expectedValue, scorecard.Players[playerIndex].Score[scorecard.CurrentHole]);
+        }
+
+        [Theory]
+        [InlineData(0, 2)]
+        [InlineData(1, 2)]
+        public void Test_Scorecard_Player_DecrementScoreWithDifferentHole(int playerIndex, int expectedValue)
+        {
+            //Arrange
+            Course course = new Course("Big Rapids", 18);
+            Player mike = new Player("Mike", course);
+            Player andrew = new Player("Andrew", course);
+            Player[] players = new Player[2] { mike, andrew }; //<-- ViewModel Logic 
+            ScoreCard scorecard = new ScoreCard(players, course);
+
+            //Act
+            scorecard.NextHole();
+            scorecard.Players[playerIndex].DecrementCurrentScore(scorecard.CurrentHole);
+
+            //Assert
+            Assert.Equal(expectedValue, scorecard.Players[playerIndex].Score[scorecard.CurrentHole]);
+            Assert.Equal(2, scorecard.CurrentHole);
+            
         }
 
 

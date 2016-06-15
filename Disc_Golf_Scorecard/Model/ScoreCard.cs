@@ -35,13 +35,19 @@ namespace Disc_Golf_Scorecard
             get { return currentHole; }
         }
 
+        public Player[] Players
+        {
+            get { return players; }
+            set { players = value; }
+        }
+
         #endregion
 
         #region Public Methods
 
         public void NextHole()
         {
-            if (currentHole<course.NumberOfHoles)
+            if (currentHole < course.NumberOfHoles)
             {
                 currentHole++;
             }
@@ -49,7 +55,7 @@ namespace Disc_Golf_Scorecard
 
         public void PreviousHole()
         {
-            if (currentHole>1)
+            if (currentHole > 1)
             {
                 currentHole--;
             }
