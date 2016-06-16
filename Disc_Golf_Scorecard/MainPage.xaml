@@ -7,7 +7,113 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource  ApplicationPageBackgroundThemeBrush }"  >
+        <Grid Height="75" VerticalAlignment="Top" Margin="20, 20, 20, 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border x:Name="border0x0"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" BorderBrush="Blue" BorderThickness="1,1, 0.5, 0.5"/>
+            <Border x:Name="border0x1"  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x2"  Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x3"  Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x4"  Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x5"  Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x6"  Grid.Row="0" Grid.Column="6" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x7"  Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x8"  Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x9"  Grid.Row="0" Grid.Column="9" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x10"  Grid.Row="0" Grid.Column="10" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x11"  Grid.Row="0" Grid.Column="11" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x12"  Grid.Row="0" Grid.Column="12" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x13"  Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x14"  Grid.Row="0" Grid.Column="14" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x15"  Grid.Row="0" Grid.Column="15" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x16"  Grid.Row="0" Grid.Column="16" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 0.5, 0.5"/>
+            <Border x:Name="border0x17"  Grid.Row="0" Grid.Column="17" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 1, 1, 0.5"/>
+
+            <Border x:Name="border1x0"  Grid.Row="1" Grid.Column="17" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 1, 1"/>
+            <Border x:Name="border1x1"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="1, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x2"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x3"  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x4"  Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x5"  Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x6"  Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x7"  Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x8"  Grid.Row="1" Grid.Column="7" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x9"  Grid.Row="1" Grid.Column="8" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x10"  Grid.Row="1" Grid.Column="9" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x11"  Grid.Row="1" Grid.Column="10" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x12"  Grid.Row="1" Grid.Column="11" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x13"  Grid.Row="1" Grid.Column="12" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x14"  Grid.Row="1" Grid.Column="13" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x15"  Grid.Row="1" Grid.Column="14" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x16"  Grid.Row="1" Grid.Column="15" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+            <Border x:Name="border1x17"  Grid.Row="1" Grid.Column="16" Grid.ColumnSpan="1" BorderBrush="Black" BorderThickness="0.5, 0.5, 0.5, 1"/>
+
+
+            <TextBlock x:Name="txtBlk0x0" Grid.Column="0" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x1" Grid.Row="0" Grid.Column="1" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x2" Grid.Row="0" Grid.Column="2" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x3" Grid.Row="0" Grid.Column="3" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x4" Grid.Row="0" Grid.Column="4" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x5" Grid.Row="0" Grid.Column="5" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x6" Grid.Row="0" Grid.Column="6" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x7" Grid.Row="0" Grid.Column="7" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x8" Grid.Row="0" Grid.Column="8" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x9" Grid.Row="0" Grid.Column="9" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x10" Grid.Row="0" Grid.Column="10" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x11" Grid.Row="0" Grid.Column="11" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x12" Grid.Row="0" Grid.Column="12" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x13" Grid.Row="0" Grid.Column="13" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x14" Grid.Row="0" Grid.Column="14" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x15" Grid.Row="0" Grid.Column="15" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x16" Grid.Row="0" Grid.Column="16" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk0x17" Grid.Row="0" Grid.Column="17" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x0" Grid.Row="1" Grid.Column="0" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x1" Grid.Row="1" Grid.Column="1" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x2" Grid.Row="1" Grid.Column="2" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x3" Grid.Row="1" Grid.Column="3" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x4" Grid.Row="1" Grid.Column="4" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x5" Grid.Row="1" Grid.Column="5" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x6" Grid.Row="1" Grid.Column="6" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x7" Grid.Row="1" Grid.Column="7" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x8" Grid.Row="1" Grid.Column="8" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x9" Grid.Row="1" Grid.Column="9" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x10" Grid.Row="1" Grid.Column="10" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x11" Grid.Row="1" Grid.Column="11" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x12" Grid.Row="1" Grid.Column="12" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x13" Grid.Row="1" Grid.Column="13" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x14" Grid.Row="1" Grid.Column="14" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x15" Grid.Row="1" Grid.Column="15" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x16" Grid.Row="1" Grid.Column="16" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+            <TextBlock x:Name="txtBlk1x17" Grid.Row="1" Grid.Column="17" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">0</TextBlock>
+        </Grid>
+        <Button x:Name="btnNextHole" Content="Next Hole" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Width="120" />
+        <Button x:Name="btnPrevHole" Content="Previous Hole" HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Center" Width="120"/>
+        <Button x:Name="btnUpScore" Content="Up" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Margin="5,15,5,100" />
+        <Button x:Name="btnDownScore" Content="Down" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Margin="5,100,5,5"/>
 
     </Grid>
 </Page>
