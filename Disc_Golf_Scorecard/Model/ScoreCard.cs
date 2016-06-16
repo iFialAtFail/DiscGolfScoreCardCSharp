@@ -41,6 +41,11 @@ namespace Disc_Golf_Scorecard
             set { players = value; }
         }
 
+        public int NumberOfPlayers
+        {
+            get { return players.Length; }
+        }
+
         #endregion
 
         #region Public Methods
